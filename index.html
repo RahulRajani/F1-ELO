@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>F1 Driver Ratings — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>F1 Driver Ratings — Interactive Dashboard</h1>
+    <p class="subtitle">Choose a year to view ratings. Data loaded from a local JSON file.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label for="yearSelect">Select year:</label>
+      <select id="yearSelect"></select>
+
+      <label for="driverSelect">Compare driver:</label>
+      <select id="driverSelect"><option value="">(pick a driver)</option></select>
+    </section>
+
+    <section class="charts">
+      <div class="chart-card">
+        <h2>Ratings by Driver</h2>
+        <canvas id="barChart" width="800" height="400"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h2>Driver rating across years</h2>
+        <canvas id="lineChart" width="800" height="300"></canvas>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <h2>Data table — click a driver to view trend</h2>
+      <div id="tableContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Generated from your uploaded Excel. Suitable for GitHub Pages.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
